@@ -112,4 +112,13 @@
         ut.email = #{email}
 
     </select>
+    <update id="updatePaswword">
+        update
+            user_tb
+        set
+            password = #{password},
+            update_dt = now()
+        where
+            user_id = #{userId}
+    </update>
 </mapper>
